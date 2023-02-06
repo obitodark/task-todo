@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Document</title>
+  </head>
+  <nav>
+   
+  </nav>
+  <body >
+    <div class="container box ">
+      <div class="row mt-5 ">
+        <h3 class="text-light  ">Todo List</h3>
+        <div class="box-form d-flex row justify-content-center">
+          <div class="col-10">
+                <input
+                id="inputadd-text"
+                type="text"
+                class="input-text"
+                placeholder=""
+                aria-label="Example text with button addon"
+                aria-describedby="button-addon1"
+                />
+          </div>
+          <div class="col-2">
+                <button
+                id="btn-add"
+                class="btn btn-primary "
+                type="button"
+                id="button-addon1"
+                >
+               
+                <i class="bi bi-plus"></i>
+                </button>
+          </div>
+          <div class="box-filter row d-grid gap-3 col-md-12 col-lg-7 p-3 mt-2">
+            
+                <div class="btn-group   d-flex d-grid gap-2 " role="group" aria-label="Basic radio toggle button group">
+
+                   <!-- <div class="col-sm-12 col-md-12"> -->
+                    <input type="radio" class="btn-check" name="status" onclick="filter()" id="btnradio1" value="all"  checked>
+                    <label class="btn btn-outline-primary" for="btnradio1">All</label>
+                
+                    <input type="radio" class="btn-check" name="status" value="pendiente" onclick="filter()" name="status" id="btnradio2" >
+                    <label class="btn btn-outline-primary" for="btnradio2">incomplete</label>
+                   <!-- </div> -->
+                
+                    <!-- <div class="col-sm-12 col-md-12"> -->
+                      <input type="radio" class="btn-check" name="status" onclick="filter()"  value="delete" id="btnradio3" >
+                    <label class="btn btn-outline-primary" for="btnradio3">Deleted</label>
+
+                    <input type="radio" class="btn-check" name="status"  onclick="filter()" value="complete" id="btnradio4" >
+                    <label class="btn btn-outline-primary" for="btnradio4">Finish</label>
+                    <!-- </div> -->
+              </div>
+           </div>
+        <div class="row ">
+          <h4 class="text-light">List</h4>
+          <div>
+            <button class="btn  btn-primary " onclick="restartList()">Reniciar</button>
+          </div>
+          <div  class="box-container col-md-12 col-lg-7 row  p-3 mt-3">
+           
+          </div>
+          <div class="col-md-8 col-lg-4  mx-5">
+            
+           <div>
+            <h4 class="text-light">Grafico</h4>
+           </div>
+            <div>  <select
+              name="select-chart"
+              id="select-chart"
+              class="form-select mb-5"
+            >
+              <option value="pie">Pai</option>
+              <option value="bar">Bar</option>
+              <option value="doughnut">Doughnut</option>
+              <option value="line">Line</option>
+            </select></div>
+            <canvas id="task-chartjs"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+  
+  <script src="./js/tasks.js"></script>
+  <script src="./js/chart-task.js"></script>
+</html>
